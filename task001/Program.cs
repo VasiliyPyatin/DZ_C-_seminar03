@@ -29,17 +29,17 @@ Clear();
 
 WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int rem = 0;
-int sum = 0;
-int temp = num;
+int result = 0;
+int revers_num = 0;
+int entered_num = num;
 while (num>0)
 {
-    rem = num % 10;
+    result = num % 10;
     num /= 10;
-    sum = sum * 10 + rem;
+    revers_num = revers_num * 10 + result;
 }
 
-//Console.WriteLine($"Перевернутое число равно {sum}");
+//Console.WriteLine($"Перевернутое число равно {revers_num}");
 
-string text = temp == sum ? "Число полиндром": "Число не полиндром";
+string text = entered_num == revers_num ? "Число полиндром": "Число не полиндром";
 WriteLine(text);
